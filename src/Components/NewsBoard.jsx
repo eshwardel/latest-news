@@ -6,7 +6,7 @@ const NewsBoard = ({category}) => {
    const[article,setArticles]=useState([]); 
 
    useEffect(()=>{
-    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+    let url = `let url = `https://gnews.io/api/v4/top-headlines?category=${category}&apikey=YOUR_API_KEY`;`;
     fetch(url).then(response=>response.json()).then(data=>setArticles(data.articles));  //fetch is used for to get data from server //API call → get response → convert to JSON → extract articles → store in state
    },[category])
   return (
